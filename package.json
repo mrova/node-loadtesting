@@ -1,0 +1,15 @@
+{
+  "name": "node-loadtesting",
+  "version": "0.1.0",
+  "description": "Node Loadtesting",
+  "main": "index.js",
+  "repository": "https://github.com/mrova/node-loadtesting",
+  "author": "Michal Mrowiec <michal.mrowiec@simplesoft.pl>",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.1",
+    "knex": "^0.13.0",
+    "mysql": "^2.14.1"
+  }
+}

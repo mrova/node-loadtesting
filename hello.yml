@@ -1,0 +1,34 @@
+config:
+  target: 'http://localhost:7555'
+  phases:
+    - duration: 1
+      arrivalRate: 10000
+  defaults:
+    headers:
+      x-my-service-auth: '987401838271002188298567'
+  variables:
+    username:
+      - "SE1"
+      - "EC1"
+      - "E8"
+      - "WH9"
+    password:
+      - "8731"
+      - "9965"
+      - "2806"
+      - "1238"
+  # payload:
+  #   # path is relative to the location of the test script
+  #   path: "users.csv"
+  #   fields:
+  #     - "username"
+  #     - "password"
+scenarios:
+  - flow:
+    - get:
+        url: "/"
+    - post:
+        url: "/createUser"
+        json:
+          username: "{{ username }}"
+          password: "{{ password }}"
